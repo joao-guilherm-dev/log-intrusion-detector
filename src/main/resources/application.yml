@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+detector:
+  log-file-path: "/var/log/app-auth.log"
+  scan-interval-ms: 2000
+  thresholds:
+    brute-force-max-attempts: 5
+    brute-force-window-seconds: 60
+  alerts:
+    webhook-url: "${WEBHOOK_URL:https://discord.com/api/webhooks/dummy-endpoint}"
